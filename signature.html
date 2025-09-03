@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signature Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="signature.css">
+    <link rel="stylesheet" href="navbar.css">
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="report.html">Attendance Report</a>
+        <a href="names.html">Manage Names</a>
+        <a href="signature.html" class="active">Signature Form</a>
+    </nav>
+    <section class="signature-form-section">
+        <h2>Signature Form</h2>
+        <p>Select your name and provide your signature below.</p>
+        <form id="signatureForm" class="signature-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <select id="name" required>
+                    <option value="" disabled selected>Select your name</option>
+                    <!-- Dynamically populated by JavaScript -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Signature:</label>
+                <canvas id="signatureCanvas" width="400" height="150"></canvas>
+            </div>
+            <div class="button-group">
+                <button type="button" id="clearSignature" class="btn-secondary">Clear Signature</button>
+                <button type="submit" class="btn-primary">Save Signature</button>
+            </div>
+        </form>
+    </section>
+    <script src="signature.js"></script>
+    <script>
+        // Highlight current page in navbar
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.navbar a');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.href === window.location.href) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
