@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Attendance Report</title>
+    <link rel="stylesheet" href="report.css">
+    <link rel="stylesheet" href="navbar.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="report.html" class="active">Attendance Report</a>
+        <a href="names.html">Manage Names</a>
+        <a href="signature.html">Signature Form</a>
+    </nav>
+    <button id="clear-signatures" class="btn-clear-signatures">Clear Signatures & Informations</button>
+    <button id="download-paper" class="btn-download-paper">Download Paper</button>
+    <div class="container" id="report-container">
+        <div class="header">
+            <img src="nh.png" class="logo left-logo">
+            <h1>AKTIVIS MARKAZ ISLAMI<br>SMA IT NUR HIDAYAH</h1>
+            <p><b>Jl Pandawa, No 10, Pucangan, Kartasura, Sukoharjo, 57168<br>Telp. (0271) 7686520, Fax. (0271) 76865</b></p>
+            <img src="ami.png" class="logo right-logo">
+        </div>
+        <hr class="top-left"><hr class="top-right">
+        <hr class="middle">
+        <hr class="lower">
+        <h4>PRESENSI KEHADIRAN PESERTA</h4>
+        <h4>SYURA PENGURUS HARIAN TETAP 6</h4>
+        <h4>MASA BAKTI 2024/2025</h4>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th rowspan="2">NO.</th>
+                    <th rowspan="2">NAMA</th>
+                    <th colspan="3"><div class="date" id="report-date">Loading date...</div></th>
+                </tr>
+                <tr>
+                    <th colspan="2">TANDA TANGAN</th>
+                    <th>KETERANGAN</th>
+                </tr>
+            </thead>
+            <tbody id="report-table-body">
+                <!-- Dynamically populated by report.js -->
+            </tbody>
+        </table>
+        <div class="information">
+            <p>Keterangan: 1. Izin: <b>I</b>, 2. Sakit: <b>S</b>, 3. Tanpa keterangan: <b>TK</b></p>
+        </div>
+    </div>
+    <input type="file" id="signature-upload" accept="image/*" style="display: none;">
+    <script src="report.js"></script>
+    <script>
+        // Highlight current page in navbar
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.navbar a');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.href === window.location.href) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
