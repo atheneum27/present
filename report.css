@@ -1,0 +1,252 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Changed from height to min-height to accommodate navbar */
+    margin: 0;
+    background-color: #fff;
+}
+
+.container {
+    text-align: center;
+    padding: 20mm;
+    background-color: white;
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 210mm; /* A4 width */
+    min-height: 297mm; /* A4 height, changed to min-height */
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.header {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 90px;
+    height: auto;
+    vertical-align: middle;
+}
+
+.left-logo {
+    position: absolute;
+    left: 17mm;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.right-logo {
+    position: absolute;
+    right: 17mm;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+h1 {
+    font-size: 23px;
+    margin: 5px 0;
+    font-weight: bold;
+    font-family: 'Mistral';
+}
+
+h4 {
+    font-size: 15px;
+    margin: 5px 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p {
+    font-size: 10px;
+    margin: 5px 0;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 25px auto 10px;
+}
+
+th, td {
+    border: 1px solid #000;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+th {
+    background-color: #fff;
+    text-align: center;
+    padding: 1px 3px 6px;
+    font-size: 13px;
+}
+
+td {
+    text-align: left;
+    padding: 2px 5px 5px;
+    vertical-align: top;
+}
+
+.date {
+    font-size: 10px;
+}
+
+.signature-wrapper {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-bottom: -10px;
+}
+
+.signature {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.signature img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+td:nth-child(1) {
+    background-color: #fff;
+    text-align: center;
+    width: 7%;
+    font-size: 13px;
+}
+
+td:nth-child(2) {
+    background-color: #fff;
+    width: 32%;
+    font-size: 13px;
+}
+
+td:nth-child(3) {
+    background-color: #fff;
+    width: 15%;
+    font-size: 13px;
+}
+
+td:nth-child(4) {
+    background-color: #fff;
+    width: 15%;
+    font-size: 13px;
+}
+
+td:nth-child(5) {
+    background-color: #fff;
+    width: 17%;
+    font-size: 13px;
+}
+
+.information {
+    text-align: left;
+    margin-left: 10%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.top-left {
+    width: 60px;
+    height: 2px;
+    margin-top: 1px;
+    margin-left: 65px;
+    background-color: #000;
+}
+
+.top-right {
+    width: 60px;
+    height: 2px;
+    margin-top: -11px;
+    margin-right: 65px;
+    background-color: #000;
+}
+
+.middle {
+    width: 520px;
+    height: 2.5px;
+    margin-top: -7px;
+    background-color: #000;
+}
+
+.lower {
+    width: 530px;
+    height: 2px;
+    margin-top: -7px;
+    margin-bottom: 10px;
+    background-color: #000;
+}
+
+.btn-clear-signatures {
+    position: fixed; /* Changed to fixed to align with navbar */
+    top: 70px; /* Position below navbar */
+    left: 20px;
+    background: linear-gradient(45deg, #2a2a2a, #1a1a1a);
+    border: 2px solid #9ae01e;
+    color: #9ae01e;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s, color 0.3s;
+}
+
+.btn-clear-signatures:hover {
+    transform: scale(1.05);
+    background: #9ae01e;
+    color: #2a2a2a;
+}
+
+.btn-download-paper {
+    position: fixed; /* Changed to fixed to align with navbar */
+    top: 70px; /* Position below navbar */
+    right: 20px;
+    background: linear-gradient(45deg, #9ae01e, #736d28);
+    border: 2px solid #9ae01e;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s, color 0.3s;
+}
+
+.btn-download-paper:hover {
+    transform: scale(1.05);
+    background: #736d28;
+    color: #fff;
+}
+
+.keterangan {
+    width: 60px;
+    height: 25px;
+    margin-top: -50px;
+    font-size: 14px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    appearance: none;
+}
+
+.keterangan:focus {
+    outline: none;
+}
